@@ -1,3 +1,3 @@
 # CREATEX Верстка
 
-Описание сборки [здесь] (https://github.com/EkaterinaKochneva/project-template) 
+Описание сборки [здесь](https://github.com/EkaterinaKochneva/project-template) 
