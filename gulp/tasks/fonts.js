@@ -11,6 +11,7 @@ module.exports = function fonts() {
       formats: ['woff']
     }))
     .pipe(dest(path.fonts.build))
+    .pipe(src(path.fonts.src))
     .pipe(ttf2woff2())
     .pipe(dest(path.fonts.build))
 }
