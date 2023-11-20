@@ -19,6 +19,29 @@ body {
   -moz-font-smoothing: grayscale;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    background-color: #2a2a2a;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, z-index 1s ease;
+  }
+
+  &.faded {
+    overflow: hidden;
+
+    &::before {
+      z-index: 2;
+      opacity: 0.8;
+      transition: opacity .3s ease-in-out, z-index 0s ease;
+    }
+  }
 }
 
 button {
@@ -32,6 +55,7 @@ button {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color .2s ease-in-out;
 }
 
 a:hover {
@@ -43,9 +67,9 @@ img {
     max-width: 100%;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
+.icon-svg {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   fill: currentColor;
 }
@@ -93,10 +117,18 @@ img {
     padding-right: 10px;
   }
 
-  @media only screen and (max-width: $bp-xs){
-    max-width: $container-max-width-xs;
-    padding-left: 0;
-    padding-right: 0;
+}
+
+.text {
+  
+  &-large {
+    font-size: 18px;
+    line-height: 150%;
   }
 
+  &-small-bold {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+  }
 }
