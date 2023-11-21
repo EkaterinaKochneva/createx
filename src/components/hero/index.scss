@@ -1,0 +1,134 @@
+@import 'src/styles/global/vars';
+
+.hero {
+
+  margin-top: 88px;
+
+  @media only screen and (max-width: $bp-xl){
+     margin-top: 65px; 
+  }
+
+  @media only screen and (max-width: $bp-sm){
+     margin-top: 60px; 
+  }
+
+  &__slider {
+  }
+
+  &__slide {
+    position: relative;
+    min-height: 988px;
+    padding: 50px 0 180px;
+    display: flex;
+    align-items: center;
+    color: $white;
+
+    @media only screen and (max-width: $bp-xxl){
+        min-height: 750px;
+    }
+
+    @media only screen and (max-width: $bp-md){
+       min-height: 600px; 
+       padding-bottom: 150px;
+    }
+  }
+
+  &__content {
+    max-width: 595px;
+    margin-top: 5px;
+  }
+  &__title {
+
+    & span {
+      color: $main-accent-color;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 150%;
+    margin-top: 24px;
+
+    @media only screen and (max-width: $bp-xxl){
+       font-size: 18px; 
+    }
+    @media only screen and (max-width: $bp-sm){
+       font-size: 16px; 
+       margin-top: 20px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media only screen and (max-width: $bp-lg){
+       gap: 12px; 
+    }
+  }
+
+  &__button {
+
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(30, 33, 44, 0.60) 0%, rgba(30, 33, 44, 0.60) 100%);
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    bottom: 120px!important;
+
+    @media only screen and (max-width: $bp-md){
+        bottom: 80px!important;
+    }
+  }
+  &__button-prev, &__button-next {
+    @media only screen and (max-width: $bp-md){
+       display: none; 
+    }
+  }
+  &__button-prev {
+    left: calc(50% - 925px);
+
+    @media only screen and (max-width: $bp-xxxl){
+        left: 24px;
+    }
+    @media only screen and (max-width: $bp-xxl){
+       left: 5px; 
+    }
+  }
+
+  &__button-next {
+    right: calc(50% - 925px);
+
+    @media only screen and (max-width: $bp-xxxl){
+        right: 24px;
+    }
+    @media only screen and (max-width: $bp-xxl){
+       right: 5px; 
+    }
+  }
+}

@@ -6,12 +6,15 @@
 @import "global/typography.scss";
 
 //Подключение ui-компонентов
+@import "../ui/button/";
 @import "../ui/checkbox/";
 @import "../ui/radio/";
 @import "../ui/switch/";
 @import "../ui/input/";
+@import "../ui/slider/";
 
 
 //Подключение компонентов
 @import "../components/header/";
+@import "../components/hero/";
 @import "../components/footer/";
