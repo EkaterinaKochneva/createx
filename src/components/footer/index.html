@@ -1,1 +1,51 @@
-<footer>Подвал</footer>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col footer__info">
+        <a href="/" class="footer__logo">
+          <img src="assets/img/icons/logo-footer.svg" alt="Логотип">        
+        </a> 
+        @@include('../../components/socials/index.html',{
+          "class":"footer__socials"
+        })
+        <p class="footer__desc text-small">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Let’s stay in touch</h4>
+        @@include('../../components/subscribe-form/index.html',{
+          "class":"footer__subscribe"
+        })
+      </div>
+    </div>
+    <div class="footer__body">
+      <address class="footer__main-info">
+        <h6 class="footer__subtitle">HEAD OFFICE</h6>
+        <p><span>Address:</span>8502 Preston Rd. Inglewood, New York</p>
+        <p><span>Call:</span><a href="tel:4055550128">(405) 555-0128</a></p>
+        <p><span>Email:</span><a href="mailto:hello@createx.com">hello@createx.com</a></p>
+      </address>
+      <div class="footer__menu">
+        <h6 class="footer__subtitle">WHO WE ARE</h6>
+        <ul  class="footer__menu-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Available Positions</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h6 class="footer__subtitle">OUR EXPERIENCE</h6>
+        <ul  class="footer__menu-list">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copyright">© All rights reserved. Made with
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#heart"></use>
+      </svg>
+    by Createx Studio </p>
+
+  </div>
+</footer>
