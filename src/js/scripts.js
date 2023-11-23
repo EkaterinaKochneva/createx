@@ -4,4 +4,5 @@
 mobileMenu();
 
 //=include ../components/hero/index.js
-//=include ../components/footer/index.js
+//=include ../ui/go-to-top/index.js
+goToTop();

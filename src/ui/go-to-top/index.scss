@@ -1,0 +1,39 @@
+@import 'src/styles/global/vars';
+
+.go-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: calc(50% - 925px);
+  width: 40px;
+  height: 40px;
+  background-color: $main-accent-color;
+  color: $white;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+
+  @media only screen and (max-width: $bp-xxxl){
+      right: 100px;
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    background-color: $main-accent-color-hover;
+  }
+
+  & .icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+}
