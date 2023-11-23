@@ -10,6 +10,7 @@ h1, .h1{
   font-size: 72px;
   line-height: 130%; 
   letter-spacing: 1px;
+  text-transform: uppercase;
   
   @media only screen and (max-width: $bp-xxl){
     font-size: 64px;
@@ -45,7 +46,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 150%;
 
   @media only screen and (max-width: $bp-lg){
@@ -64,9 +65,31 @@ h5, .h5 {
 
 h6, .h6 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
   @media only screen and (max-width: $bp-lg){
       
+  }
+}
+
+.text {
+  
+  &-large {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &-small {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &-small-bold {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
   }
 }
