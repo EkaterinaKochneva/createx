@@ -69,10 +69,6 @@
     }
   }
 
-  &__button {
-
-  }
-
   &__img {
     position: absolute;
     inset: 0;
@@ -97,6 +93,10 @@
     }
   }
 
+  &__container-pagination {
+    height: 0;
+  }
+  
   &__pagination {
     position: relative;
     bottom: 120px!important;
