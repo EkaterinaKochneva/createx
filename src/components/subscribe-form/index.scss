@@ -1,0 +1,55 @@
+@import 'src/styles/global/vars';
+
+.subscribe-form {
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 11px 150px 11px 16px;
+    max-height: 44px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $white;
+
+    @media only screen and (max-width: $bp-md){
+       max-height: 36px; 
+    }
+
+    @media only screen and (max-width: $bp-sm){
+       padding-left: 10px; 
+    }
+
+    &:focus {
+      border-color: $main-accent-color;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 150%;
+      color: rgba($color: $white, $alpha: 0.6);
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    max-width: 130px;
+  }
+
+  &__agree {
+    font-size: 12px;
+    line-height: 150%;
+    margin-top: 16px;
+  }
+}
