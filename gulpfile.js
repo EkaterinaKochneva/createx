@@ -30,6 +30,7 @@ const spriteSvg = require('./gulp/tasks/sprite-svg.js')
 const fonts = require('./gulp/tasks/fonts.js')
 const libJs = require('./gulp/tasks/lib-js.js')
 const libScss = require('./gulp/tasks/lib-scss.js')
+const deploy = require('./gulp/tasks/deploy.js')
 
 
 //Наблюдатель
@@ -57,6 +58,7 @@ exports.libScss = libScss;
 
 exports.server = server;
 exports.watcher = watcher;
+exports.deploy = deploy;
 
 //Сборка
 
