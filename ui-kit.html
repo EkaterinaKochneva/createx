@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <title>Ui-Kit</title>
+    <style>
+      .ui-kit {
+        padding: 50px 0;
+      }
+      .ui-kit__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: #333333;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+      .ui-kit__section {
+        padding: 20px 0 10px;
+        border-bottom: 1px solid #333333;
+      }
+      .ui-kit__subtitle{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 140%;
+        color: #333333;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .ui-kit__row {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 3%;
+      }
+      .ui-kit__col {
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+
+        <div class="container">
+          <div class="ui-kit">
+            <div class="ui-kit__title">
+              Компоненты сайта
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Заголовки
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <h1>Заголовок H1</h1>
+                </div>
+                <div class="ui-kit__row">
+                  <h2>Заголовок H2</h2>
+                </div>
+                <div class="ui-kit__row">
+                  <h3>Заголовок H3</h3>
+                </div>
+                <div class="ui-kit__row">
+                  <h4>Заголовок H4</h4>
+                </div>
+                <div class="ui-kit__row">
+                  <h5>Заголовок H5</h5>
+                </div>
+                <div class="ui-kit__row">
+                  <h6>Заголовок H6</h6>
+                </div>     
+              </div>
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Кнопки
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <button class="button button--lg">Кнопка</button>
+                  </div>
+                  <div class="ui-kit__col">
+                    <button class="button">Кнопка</button>
+                  </div>
+                  <div class="ui-kit__col">
+                    <button class="button button--sm">Кнопка</button>
+                  </div>
+                </div>                    
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <button class="button button--border">Кнопка</button>
+                  </div>
+                  <div class="ui-kit__col" style="background: #333333; padding: 10px; text-align: center;">
+                    <button class="button button--white-border">Кнопка</button>
+                  </div>
+                </div>                    
+              </div>
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Чекбоксы
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox">
+                      <span class="checkbox__text">Чекбокс</span>
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="checkbox">
+                      <input class="checkbox__input" type="checkbox" disabled>
+                      <span class="checkbox__text">Чекбокс</span>
+                    </label>
+                  </div>
+                </div>                    
+              </div>
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Радиокнопки
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <label class="radio">
+                      <input class="radio__input" type="radio"name="radio-1" checked>
+                      <span class="radio__text">Радиокнопка</span>
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="radio">
+                      <input class="radio__input" type="radio" name="radio-1">
+                      <span class="radio__text">Радиокнопка</span>
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="radio">
+                      <input class="radio__input" type="radio" name="radio-1" disabled>
+                      <span class="radio__text">Радиокнопка</span>
+                    </label>
+                  </div>
+                </div>                    
+              </div>
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Переключатель
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <label class="switch">
+                      <input class="switch__input" type="checkbox">
+                      <span class="switch__text">Переключатель</span>
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="switch">
+                      <input class="switch__input" type="checkbox" disabled>
+                      <span class="switch__text">Переключатель</span>
+                    </label>
+                  </div>
+                </div>                    
+              </div>
+            </div>
+
+            <div class="ui-kit__section">
+              <div class="ui-kit__subtitle">
+                Поля ввода
+              </div>
+              <div class="ui-kit__block">
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <label class="input">                      
+                      <input class="input__native" type="text" placeholder="Placeholder"> 
+                      <span class="input__lable">Лейбл</span>                                                   
+                    </label>
+                  </div>
+                  
+                  <div class="ui-kit__col">
+                    <label class="input">                      
+                      <input class="input__native" type="text" placeholder="Placeholder"> 
+                      <span class="input__lable">Лейбл</span>     
+                      <div class="input__status">Статус</div>                                              
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="input">
+                      <input class="input__native" type="text" placeholder="Placeholder" disabled> 
+                      <span class="input__lable">Лейбл</span>                                                   
+                    </label>
+                  </div>
+                </div>                    
+                <div class="ui-kit__row">
+                  <div class="ui-kit__col">
+                    <label class="input">
+                      <textarea class="input__native" type="text" placeholder="Placeholder"></textarea>
+                      <span class="input__lable">Лейбл</span>
+                    </label>
+                  </div>
+                  <div class="ui-kit__col">
+                    <label class="input">
+                      <textarea class="input__native" type="text" placeholder="Placeholder" disabled></textarea>
+                      <span class="input__lable">Лейбл</span>
+                    </label>
+                  </div>
+                </div>                    
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>  
+    </div>
+    
+    <script src="/assets/js/scripts.min.js"></script>
+
+  </body>
+</html>

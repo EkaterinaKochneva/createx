@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/lib/lib.css">
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <title>Главная страница</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+
+      <header class="header header--main">
+  <div class="container header__container">
+    <a href="/" class="header__logo">
+      <img src="assets/img/icons/logo-header.svg" alt="Логотип">        
+    </a> 
+    <nav class="header__nav top-menu">
+      <button class="top-menu__close" type="button">
+        Закрыть
+      </button>
+      <ul class="top-menu__list">
+        <li class="top-menu__item"><a href="#" class="top-menu__link">About Us</a></li>
+        <li class="top-menu__item"><a href="#" class="top-menu__link">Services</a></li>
+        <li class="top-menu__item"><a href="#" class="top-menu__link">Work</a></li>
+        <li class="top-menu__item"><a href="#" class="top-menu__link">News</a></li>
+        <li class="top-menu__item"><a href="#" class="top-menu__link">Contacts</a></li>
+      </ul>
+    </nav>
+    <div class="header__contacts header-contacts">
+      <div class="header-contacts__item">
+        <svg class="header-contacts__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#iphone"></use>
+        </svg>
+        <div class="header-contacts__info">
+           <span class="text-small-bold">Call us</span>
+           <a class="text-large" href="tel:4055550128">(405) 555-0128</a>
+        </div>
+      </div>
+      <div class="header-contacts__item">
+        <svg class="header-contacts__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#chat"></use>
+        </svg>
+        <div class="header-contacts__info">
+           <span class="text-small-bold">Talk to us</span>
+           <a class="text-large" href="mailto:hello@createx.com">hello@createx.com</a>
+        </div>
+      </div>
+    </div>
+    <button class="burger header__burger" type="button">
+      <span>Меню</span>
+    </button>
+    
+  </div>
+</header>
+
+      <main>
+        <section class="hero">
+  <div class="hero__slider slider swiper">
+    <div class="swiper-wrapper">
+
+      <div class="hero__slide swiper-slide">
+        <div class="container"> 
+          <div class="hero__content">
+            <h1 class="hero__title">CREATE<span>X</span> CONSTRUCTION</h1>
+            <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
+            <div class="hero__bottom">
+              <button class="hero__button button button--lg button--white-border">Learn more about us</button>
+              <a class="hero__button button button--lg" href="">SUBMIT REQUEST</a>
+            </div>
+          </div>
+          <picture class="hero__img">
+            <source type="image/webp" srcset="assets/img/hero/hero-1.webp">
+            <img src="assets/img/hero/hero-1.jpg" alt="">
+          </picture>
+        </div>        
+      </div>
+
+      <div class="hero__slide swiper-slide">
+        <div class="container"> 
+          <div class="hero__content">
+            <h2 class="h1 hero__title">Browse our selected projects</h2>
+            <p class="hero__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptate iure exercitationem, eligendi explicabo dolores laborum id fuga! Laboriosam repellat quaerat in cupiditate error consequuntur provident assumenda magnam! Blanditiis, nisi!</p>
+            <div class="hero__bottom">
+              <a class="hero__button button button--white-border button--lg" href="">SUBMIT REQUEST</a>
+            </div>
+          </div>
+          <picture class="hero__img">
+            <source type="image/webp" srcset="assets/img/hero/hero-2.webp">
+            <img src="assets/img/hero/hero-2.jpg" alt="">
+          </picture>
+        </div>        
+      </div>
+
+      <div class="hero__slide swiper-slide">
+        <div class="container"> 
+          <div class="hero__content">
+            <h2 class="h1 hero__title">Lorem ipsum dolor</h2>
+            <p class="hero__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ab sunt dignissimos, voluptatum tempora doloribus, et debitis laborum, hic reprehenderit fugiat quos ea molestiae at deleniti soluta pariatur ullam adipisci?</p>
+            <div class="hero__bottom">
+              <button class="hero__button button button--lg">Learn more about us</button>
+            </div>
+          </div>
+          <picture class="hero__img">
+            <source type="image/webp" srcset="assets/img/hero/hero-3.webp">
+            <img src="assets/img/hero/hero-3.jpg" alt="">
+          </picture>
+        </div>        
+      </div>
+      
+      <div class="hero__slide swiper-slide">
+        <div class="container"> 
+          <div class="hero__content">
+            <h1 class="hero__title">CREATE<span>X</span> CONSTRUCTION</h1>
+            <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
+            <div class="hero__bottom">
+              <button class="hero__button button button--lg button--white-border">Learn more about us</button>
+              <a class="hero__button button button--lg" href="">SUBMIT REQUEST</a>
+            </div>
+          </div>
+          <picture class="hero__img">
+            <source type="image/webp" srcset="assets/img/hero/hero-1.webp">
+            <img src="assets/img/hero/hero-1.jpg" alt="">
+          </picture>
+        </div>        
+      </div>
+    </div>
+    <div class="container hero__container-pagination"> 
+      <div class="slider__pagination hero__pagination swiper-pagination"></div>
+    </div>
+    <div class="slider__button-prev hero__button-prev swiper-button-prev"></div>
+    <div class="slider__button-next hero__button-next swiper-button-next"></div>
+  </div>
+</section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="text-center">We are Createx Construction Bureau </h2>
+            <p class="text-center text-large">We are rightfully considered to be the best construction company in the USA.</p>
+            <div class="section__video">
+              <div class="video-cover" data-video="https://youtu.be/dQw4w9WgXcQ">
+  <button class="video-cover__button" aria-label="Play video">
+    <img src="assets/img/icons/play-large.svg" alt="">
+  </button>
+  <picture class="video-cover__img">
+    <source type="image/webp" srcset="assets/img/main/video-cover.webp">
+    <img src="assets/img/main/video-cover.jpg" alt="Видео">
+  </picture>     
+</div>
+            </div>            
+          </div>          
+        </section>
+
+        <section class="section section--sm-pd section--hidden">          
+          <div class="container">
+            <h2 class="text-center">Our core values</h2>
+            <p class="text-center text-large">Our mission is to set the highest standards for construction sphere.</p>
+            <div class="benefits">
+  <div class="benefits__item">
+    <div class="benefits__icon">
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-like"></use>
+      </svg>
+    </div>
+    <h5 class="benefits__title">Quality</h5>
+    <p class="benefits__desc">Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+  </div>
+  <div class="benefits__item">
+    <div class="benefits__icon">
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-hand"></use>
+      </svg>
+    </div>
+    <h5 class="benefits__title">Safety</h5>
+    <p class="benefits__desc">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.</p>
+  </div>
+  <div class="benefits__item">
+    <div class="benefits__icon">
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-slippers"></use>
+      </svg>
+    </div>
+    <h5 class="benefits__title">Comfort</h5>
+    <p class="benefits__desc">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.</p>
+  </div>
+</div>
+          </div> 
+        </section>
+        
+      </main> 
+
+      <button class="go-to-top">
+  <svg class="icon-svg">
+    <use xlink:href="assets/img/svg-sprite/sprite.svg#up-chevron"></use>
+  </svg>
+</button>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col footer__info">
+        <a href="/" class="footer__logo">
+          <img src="assets/img/icons/logo-footer.svg" alt="Логотип">        
+        </a> 
+        <div class="footer__socials socials">
+  <a href="#" class="socials__item">
+    <svg class="socials__icon icon-svg">
+      <use xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp"></use>
+    </svg>
+  </a>
+  <a href="#" class="socials__item">
+    <svg class="socials__icon icon-svg">
+      <use xlink:href="assets/img/svg-sprite/sprite.svg#messanger"></use>
+    </svg>
+  </a>
+  <a href="#" class="socials__item">
+    <svg class="socials__icon icon-svg">
+      <use xlink:href="assets/img/svg-sprite/sprite.svg#facebook"></use>
+    </svg>
+  </a>
+  </a>
+  <a href="#" class="socials__item">
+    <svg class="socials__icon icon-svg">
+      <use xlink:href="assets/img/svg-sprite/sprite.svg#twitter"></use>
+    </svg>
+  </a>
+  <a href="#" class="socials__item">
+    <svg class="socials__icon icon-svg">
+      <use xlink:href="assets/img/svg-sprite/sprite.svg#youtube"></use>
+    </svg>
+  </a>
+</div>
+        <p class="footer__desc text-small">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Let’s stay in touch</h4>
+        <form class="footer__subscribe subscribe-form">
+  <div class="subscribe-form__wrapper">
+    <input class="subscribe-form__input" type="email" name="email" placeholder="Your email address">
+    <input class="subscribe-form__submit button" type="submit" value="subscribe">
+  </div>
+  <p class="subscribe-form__agree">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+</form>
+
+      </div>
+    </div>
+    <div class="footer__body">
+      <address class="footer__main-info">
+        <h6 class="footer__subtitle">HEAD OFFICE</h6>
+        <p><span>Address:</span>8502 Preston Rd. Inglewood, New York</p>
+        <p><span>Call:</span><a href="tel:4055550128">(405) 555-0128</a></p>
+        <p><span>Email:</span><a href="mailto:hello@createx.com">hello@createx.com</a></p>
+      </address>
+      <div class="footer__menu">
+        <h6 class="footer__subtitle">WHO WE ARE</h6>
+        <ul  class="footer__menu-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Available Positions</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h6 class="footer__subtitle">OUR EXPERIENCE</h6>
+        <ul  class="footer__menu-list">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copyright">© All rights reserved. Made with
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#heart"></use>
+      </svg>
+    by Createx Studio </p>
+
+  </div>
+</footer>
+
+    </div>
+
+    <script src="/assets/lib/lib.js"></script>
+    <script src="/assets/js/scripts.min.js"></script>
+
+  </body>
+</html>
