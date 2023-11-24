@@ -6,3 +6,7 @@ mobileMenu();
 //=include ../components/hero/index.js
 //=include ../ui/go-to-top/index.js
 goToTop();
+
+//=include ../ui/video-cover/index.js
+const videos = document.querySelectorAll('.video-cover');
+videoCover(videos);
