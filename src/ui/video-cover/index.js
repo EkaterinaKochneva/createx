@@ -29,12 +29,4 @@ function videoCover(videos) {
     });
 
   });
-  
-  // const videoCover = element.querySelector('.video-cover__img');
-  // const videoIframe = element.querySelector('iframe');
-
-  // button.addEventListener('click', function() {
-  //   videoCover.classList.add('fade-out');
-  //   videoIframe[0].src += "?&autoplay=1";
-  // });
 }
