@@ -6,17 +6,24 @@
 
   &__native {
     width: 100%;
-    border: 1px solid $main-text-color;
+    border: 1px solid $grey-400;
     font-size: 14px;
-    padding: 12px 15px;
+    line-height: 150%;
+    color: $grey-800;
+    padding: 11px 16px 12px 16px;
+    border-radius: 4px;
+    background-color: $grey-200;
 
     &::placeholder{
-        color: $main-text-color;
+        color: $grey-600;
     }
 
     &:focus{
-        outline: none;
-        border-color: $main-accent-color;
+      outline: none;
+      border-color: rgba(255, 90, 48, 0.40);
+      border-radius: 4px;
+      background: $white;
+      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(255, 90, 48, 0.04), 0px 30px 24px -10px rgba(255, 90, 48, 0.05), 0px 80px 80px -20px rgba(255, 90, 48, 0.08);
     }
 
     &:disabled {
@@ -30,15 +37,10 @@
 
   &__lable {
     display: block;
+    color: $grey-800;
     font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  &__status {
-    font-size: 12px;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    line-height: 150%;
+    margin-bottom: 8px;
   }
 
   textarea{
@@ -47,4 +49,39 @@
     height: 100px;
 
   }
+
+  &__status {
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+
+  &--success &__status{
+    display: block;
+    color: $success;
+  }
+  &--success &__native{
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.4717 3.52827C14.7321 3.78862 14.7321 4.21073 14.4717 4.47108L6.47173 12.4711C6.21138 12.7314 5.78927 12.7314 5.52892 12.4711L1.52892 8.47108C1.26857 8.21073 1.26857 7.78862 1.52892 7.52827C1.78927 7.26792 2.21138 7.26792 2.47173 7.52827L6.00033 11.0569L13.5289 3.52827C13.7893 3.26792 14.2114 3.26792 14.4717 3.52827Z' fill='%2303CEA4'/%3E%3C/svg%3E");
+    background-position: center right 16px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+
+  &--error &__native {
+    border-color: $danger;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.00033 2.00033C4.68662 2.00033 2.00033 4.68662 2.00033 8.00033C2.00033 11.314 4.68662 14.0003 8.00033 14.0003C11.314 14.0003 14.0003 11.314 14.0003 8.00033C14.0003 4.68662 11.314 2.00033 8.00033 2.00033ZM0.666992 8.00033C0.666992 3.95024 3.95024 0.666992 8.00033 0.666992C12.0504 0.666992 15.3337 3.95024 15.3337 8.00033C15.3337 12.0504 12.0504 15.3337 8.00033 15.3337C3.95024 15.3337 0.666992 12.0504 0.666992 8.00033Z' fill='%23FF4242'/%3E%3Cpath d='M8.66699 10.667C8.66699 11.0352 8.36851 11.3337 8.00033 11.3337C7.63214 11.3337 7.33366 11.0352 7.33366 10.667C7.33366 10.2988 7.63214 10.0003 8.00033 10.0003C8.36851 10.0003 8.66699 10.2988 8.66699 10.667Z' fill='%23FF4242'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.00033 9.08366C7.63214 9.08366 7.33366 8.78518 7.33366 8.41699V4.66699C7.33366 4.2988 7.63214 4.00033 8.00033 4.00033C8.36851 4.00033 8.66699 4.2988 8.66699 4.66699V8.41699C8.66699 8.78518 8.36851 9.08366 8.00033 9.08366Z' fill='%23FF4242'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: center right 16px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+  &--error &__status{
+    display: block;
+    color: $danger;
+  }
+
+
 }
