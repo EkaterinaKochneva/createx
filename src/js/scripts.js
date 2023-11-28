@@ -10,3 +10,7 @@ goToTop();
 //=include ../ui/video-cover/index.js
 const videos = document.querySelectorAll('.video-cover');
 videoCover(videos);
+
+//=include ../ui/phone-mask/index.js
+const inputPhoneList = document.querySelectorAll('input[type="tel"]');
+phoneMask(inputPhoneList);
