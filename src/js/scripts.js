@@ -14,3 +14,7 @@ videoCover(videos);
 //=include ../ui/phone-mask/index.js
 const inputPhoneList = document.querySelectorAll('input[type="tel"]');
 phoneMask(inputPhoneList);
+
+//=include ../ui/form-validate/index.js
+const formsList = document.querySelectorAll('.validate-form');
+formValidate(formsList);
