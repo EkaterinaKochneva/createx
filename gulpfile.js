@@ -30,6 +30,7 @@ const spriteSvg = require('./gulp/tasks/sprite-svg.js')
 const fonts = require('./gulp/tasks/fonts.js')
 const libJs = require('./gulp/tasks/lib-js.js')
 const libScss = require('./gulp/tasks/lib-scss.js')
+const favicon = require('./gulp/tasks/favicon.js')
 const deploy = require('./gulp/tasks/deploy.js')
 
 
@@ -43,6 +44,7 @@ const watcher = () => {
   watch(path.spriteSvg.watch, spriteSvg).on('all', browserSync.reload);
   watch(path.libJs.watch, libJs).on('all', browserSync.reload);
   watch(path.libScss.watch, libScss).on('all', browserSync.reload);
+  watch(path.favicon.watch, favicon).on('all', browserSync.reload);
 }
 
 exports.clear = clear;
@@ -55,6 +57,7 @@ exports.spriteSvg = spriteSvg;
 exports.fonts = fonts;
 exports.libJs = libJs;
 exports.libScss = libScss;
+exports.favicon = favicon;
 
 exports.server = server;
 exports.watcher = watcher;
@@ -64,7 +67,7 @@ exports.deploy = deploy;
 
 const build = series(
   clear,
-  parallel(html, style, scripts, imgOptimize, icons, spriteSvg, fonts, libJs, libScss),
+  parallel(html, style, scripts, imgOptimize, icons, spriteSvg, fonts, libJs, libScss, favicon),
 )
 const dev = series(
   build,
