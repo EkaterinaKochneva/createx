@@ -4,7 +4,6 @@ function phoneMask(elements) {
     const maskOptions = {
       mask: '+{7} (000) 000-00-00'
     };
-    console.log("phonemask")
     elements.forEach(element => {
       const mask = IMask(element, maskOptions);
     });
