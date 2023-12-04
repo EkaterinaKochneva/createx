@@ -75,24 +75,25 @@
   }
 
   &__main-info {
-
-    font-style: normal;
     
-    @media only screen and (max-width: $bp-sm){
-       font-size: 14px; 
-    }
+    address {
+      font-style: normal;
+      @media only screen and (max-width: $bp-sm){
+        font-size: 14px; 
+     }
+ 
+     p {      
+       &:not(:last-child){
+         margin-bottom: 4px;
+       }
+ 
+       span {
+       color: $white;
+       margin-right: 5px;
+       }
+     }
+    }   
 
-    p {     
-
-      &:not(:last-child){
-        margin-bottom: 4px;
-      }
-
-      span {
-      color: $white;
-      margin-right: 5px;
-      }
-    }
   }
 
   &__subtitle {
