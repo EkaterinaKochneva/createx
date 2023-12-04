@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="assets/lib/lib.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
   <title>Главная страница</title>
+
+  <link rel="icon" href="assets/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
 </head>
 
   <body>
@@ -68,7 +72,7 @@
             <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
             <div class="hero__bottom">
               <button class="hero__button button button--lg button--white-border">Learn more about us</button>
-              <a class="hero__button button button--lg" href="">SUBMIT REQUEST</a>
+              <a class="hero__button button button--lg" href="#" data-modal="modal-1">SUBMIT REQUEST</a>
             </div>
           </div>
           <picture class="hero__img">
@@ -188,6 +192,32 @@
 </div>
           </div> 
         </section>
+
+        <section class="section section--absolute">          
+          <div class="container">
+            <div class="small-form small-form--absolute">
+  <h4 class="small-form__title text-center">Want to know more? Ask us a question:</h4>
+  <form class="small-form__form validate-form">
+    <div class="small-form__row">
+      <label class="small-form__input input">                      
+        <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+        <span class="input__lable">Name</span>                                              
+      </label>
+      <label class="small-form__input input">                      
+        <input class="input__native" name="phone" type="tel" placeholder="Your phone" required> 
+        <span class="input__lable">Phone</span>                                               
+      </label>
+      <label class="small-form__input small-form__input--message input">                      
+        <input class="input__native" name="message" type="text" placeholder="Your message"> 
+        <span class="input__lable">Message</span>     
+        <div class="input__status">Статус</div>                                              
+      </label>
+      <input class="small-form__button button" type="submit" value="Send">
+    </div>
+  </form>
+</div>
+          </div> 
+        </section>
         
       </main> 
 
@@ -235,9 +265,11 @@
       </div>
       <div class="footer__col">
         <h4 class="footer__title">Let’s stay in touch</h4>
-        <form class="footer__subscribe subscribe-form">
+        <form class="footer__subscribe subscribe-form validate-form">
   <div class="subscribe-form__wrapper">
-    <input class="subscribe-form__input" type="email" name="email" placeholder="Your email address">
+    <label class="input">
+      <input class="subscribe-form__input" type="email" name="email" placeholder="Your email address">
+    </label>    
     <input class="subscribe-form__submit button" type="submit" value="subscribe">
   </div>
   <p class="subscribe-form__agree">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
@@ -281,5 +313,27 @@
 <script src="assets/js/scripts.min.js"></script>
 
     </div>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-1-title">
+          Micromodal
+        </h2>
+        <button class="modal__close" aria-label="Close modal" data-modal-close></button>
+      </header>
+      <main class="modal__content" id="modal-1-content">
+        <p>
+          Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+        </p>
+      </main>
+      <footer class="modal__footer">
+        <button class="button modal__btn-primary">Continue</button>
+        <button class="button modal__btn" data-modal-close aria-label="Close this dialog window">Close</button>
+      </footer>
+    </div>
+  </div>
+</div>
+    
   </body>
 </html>
