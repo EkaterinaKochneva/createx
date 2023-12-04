@@ -1,4 +1,5 @@
 // Подключение скриптов блоков и страниц
+window.addEventListener('DOMContentLoaded', function() {
 
 //=include ../components/header/index.js
 mobileMenu();
@@ -18,3 +19,7 @@ phoneMask(inputPhoneList);
 //=include ../ui/form-validate/index.js
 const formsList = document.querySelectorAll('.validate-form');
 formValidate(formsList);
+
+//=include ../ui/modal/index.js
+
+});
