@@ -1,0 +1,111 @@
+<div class="modal" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <h4 class="modal__title" id="modal-1-title">Submit Request</h4>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__content" id="modal-1-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="phone" type="tel" placeholder="Your phone" required> 
+            <span class="input__lable">Phone*</span>
+          </label>
+          <label class="modal__input modal__input--message input">
+            <textarea class="input__native" name="message" type="text" placeholder="Your message"></textarea>
+            <span class="input__lable">Message*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-subscribe" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-title">
+      <header class="modal__header">
+        <h4 class="modal__title" id="modal-subscribe-title">Subscribe to our newsletter</h4>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__content" id="modal-subscribe-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="email" type="email" placeholder="Your working email" required> 
+            <span class="input__lable">Email*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-SV" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-SV-title">
+      <header class="modal__header">
+        <h3 class="modal__title" id="modal-SV-title">Send your CV</h3>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__content" id="modal-SV-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="location" type="text" placeholder="Choose your location" required> 
+            <span class="input__lable">Location*</span>
+          </label>
+          <select name="location">
+            <option value="Location 1">Location 1</option>
+            <option value="Location 2">Location 2</option>
+            <option value="Location 3">Location 3</option>
+            <option value="Location 4">Location 4</option>
+            <option value="Location 5">Location 5</option>
+            <option value="Location 6">Location 6</option>
+          </select>
+          <label class="modal__input input">
+            <input class="input__native" name="phone" type="tel" placeholder="Your phone number" required> 
+            <span class="input__lable">Phone*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="email" type="email" placeholder="Your working email" required> 
+            <span class="input__lable">Email*</span>
+          </label>
+          <label class="modal__input modal__input--message input">
+            <textarea class="input__native" name="message" type="text" placeholder="Your covering letter"></textarea>
+            <span class="input__lable">Сovering letter</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="file" type="file" required> 
+            <span class="input__lable">Attach your CV*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
