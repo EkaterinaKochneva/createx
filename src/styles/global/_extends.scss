@@ -1,0 +1,17 @@
+%input-box {
+  width: 100%;
+  padding: 11px 16px 12px 16px;
+  background-color: $grey-200;
+  border: 1px solid $grey-400;
+  border-radius: 4px;
+  color: $grey-800;
+  font-size: 14px;
+  line-height: 150%; 
+}
+
+%input-box-focus {
+  outline: none;
+  border-color: rgba(255, 90, 48, 0.40);
+  background-color: $white;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(255, 90, 48, 0.04), 0px 30px 24px -10px rgba(255, 90, 48, 0.05), 0px 80px 80px -20px rgba(255, 90, 48, 0.08);
+}
