@@ -22,4 +22,8 @@ formValidate(formsList);
 
 //=include ../ui/modal/index.js
 
+//=include ../ui/select/index.js
+const selectList = document.querySelectorAll('.select');
+select(selectList);
+
 });

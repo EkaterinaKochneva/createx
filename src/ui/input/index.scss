@@ -1,29 +1,21 @@
 @import 'src/styles/global/vars';
+@import 'src/styles/global/extends';
+
 .input {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
 
-  &__native {
-    width: 100%;
-    border: 1px solid $grey-400;
-    font-size: 14px;
-    line-height: 150%;
-    color: $grey-800;
-    padding: 11px 16px 12px 16px;
-    border-radius: 4px;
-    background-color: $grey-200;
+  &__native {   
+    
+    @extend %input-box;  
 
     &::placeholder{
-        color: $grey-600;
+      color: $grey-600;
     }
 
     &:focus{
-      outline: none;
-      border-color: rgba(255, 90, 48, 0.40);
-      border-radius: 4px;
-      background: $white;
-      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(255, 90, 48, 0.04), 0px 30px 24px -10px rgba(255, 90, 48, 0.05), 0px 80px 80px -20px rgba(255, 90, 48, 0.08);
+      @extend %input-box-focus;
     }
 
     &:disabled {
@@ -63,12 +55,13 @@
     & span {
       display: block;
     }
-   }
+  }
 
   &--success &__status{
     display: block;
     color: $success;
   }
+
   &--success &__native{
     padding-right: 40px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.4717 3.52827C14.7321 3.78862 14.7321 4.21073 14.4717 4.47108L6.47173 12.4711C6.21138 12.7314 5.78927 12.7314 5.52892 12.4711L1.52892 8.47108C1.26857 8.21073 1.26857 7.78862 1.52892 7.52827C1.78927 7.26792 2.21138 7.26792 2.47173 7.52827L6.00033 11.0569L13.5289 3.52827C13.7893 3.26792 14.2114 3.26792 14.4717 3.52827Z' fill='%2303CEA4'/%3E%3C/svg%3E") !important;
@@ -85,10 +78,9 @@
     background-repeat: no-repeat;
     background-size: 16px;
   }
+
   &--error &__status{
     display: block;
     color: $danger;
   }
-
-
 }
