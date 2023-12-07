@@ -5,6 +5,8 @@
 @import "global/theme.scss";
 @import "global/typography.scss";
 
+@import 'src/styles/global/extends';
+
 //Подключение ui-компонентов
 @import "../ui/button/";
 @import "../ui/checkbox/";
