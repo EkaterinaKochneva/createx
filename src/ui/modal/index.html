@@ -99,9 +99,12 @@
             <textarea class="input__native" name="message" type="text" placeholder="Your covering letter"></textarea>
             <span class="input__lable">Сovering letter</span>
           </label>
-          <label class="modal__input input">
-            <input class="input__native" name="file" type="file" required> 
-            <span class="input__lable">Attach your CV*</span>
+          <label class="modal__input input add-file">
+            <svg class="icon-svg add-file__icon">
+              <use xlink:href="assets/img/svg-sprite/sprite.svg#attach"></use>
+            </svg>
+            <input class="add-file__input" name="file" type="file" required> 
+            <span class="add-file__text">Attach your CV*</span>
           </label>
           <button class="modal__button button" type="submit">Send</button>
         </form>

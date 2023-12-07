@@ -26,6 +26,9 @@ function formValidate(elements) {
         message: "format +7 (000) 000-00-00"
       },
     },
+    file: {
+      presence: true,
+    }
   };
 
   if (elements.length !== 0) {

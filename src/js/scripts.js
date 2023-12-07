@@ -26,4 +26,8 @@ formValidate(formsList);
 const selectList = document.querySelectorAll('.select');
 select(selectList);
 
+//=include ../ui/add-file/index.js
+const addFileList = document.querySelectorAll('.add-file');
+addFileInput(addFileList);
+
 });
