@@ -1,7 +1,7 @@
 {
-  "name": null,
-  "short_name": null,
-  "description": null,
+  "name": "My Site",
+  "short_name": "Site",
+  "description": "This is my site",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

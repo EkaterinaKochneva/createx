@@ -72,7 +72,7 @@
             <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
             <div class="hero__bottom">
               <button class="hero__button button button--lg button--white-border">Learn more about us</button>
-              <a class="hero__button button button--lg" href="#" data-modal="modal-1">SUBMIT REQUEST</a>
+              <a class="hero__button button button--lg" href="#" data-modal="modal-SV">SUBMIT REQUEST</a>
             </div>
           </div>
           <picture class="hero__img">
@@ -88,7 +88,7 @@
             <h2 class="h1 hero__title">Browse our selected projects</h2>
             <p class="hero__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptate iure exercitationem, eligendi explicabo dolores laborum id fuga! Laboriosam repellat quaerat in cupiditate error consequuntur provident assumenda magnam! Blanditiis, nisi!</p>
             <div class="hero__bottom">
-              <a class="hero__button button button--white-border button--lg" href="">SUBMIT REQUEST</a>
+              <a class="hero__button button button--white-border button--lg" href="#" data-modal="modal-1">SUBMIT REQUEST</a>
             </div>
           </div>
           <picture class="hero__img">
@@ -104,7 +104,7 @@
             <h2 class="h1 hero__title">Lorem ipsum dolor</h2>
             <p class="hero__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ab sunt dignissimos, voluptatum tempora doloribus, et debitis laborum, hic reprehenderit fugiat quos ea molestiae at deleniti soluta pariatur ullam adipisci?</p>
             <div class="hero__bottom">
-              <button class="hero__button button button--lg">Learn more about us</button>
+              <a class="hero__button button button--lg" href="#">Learn more about us</a>
             </div>
           </div>
           <picture class="hero__img">
@@ -121,7 +121,7 @@
             <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
             <div class="hero__bottom">
               <button class="hero__button button button--lg button--white-border">Learn more about us</button>
-              <a class="hero__button button button--lg" href="">SUBMIT REQUEST</a>
+              <a class="hero__button button button--lg" href="#" data-modal="modal-1">SUBMIT REQUEST</a>
             </div>
           </div>
           <picture class="hero__img">
@@ -199,18 +199,17 @@
   <h4 class="small-form__title text-center">Want to know more? Ask us a question:</h4>
   <form class="small-form__form validate-form">
     <div class="small-form__row">
-      <label class="small-form__input input">                      
+      <label class="small-form__input input">
         <input class="input__native" name="name" type="text" placeholder="Your name" required> 
-        <span class="input__lable">Name</span>                                              
+        <span class="input__lable">Name</span>
       </label>
-      <label class="small-form__input input">                      
+      <label class="small-form__input input">
         <input class="input__native" name="phone" type="tel" placeholder="Your phone" required> 
-        <span class="input__lable">Phone</span>                                               
+        <span class="input__lable">Phone</span>
       </label>
-      <label class="small-form__input small-form__input--message input">                      
+      <label class="small-form__input small-form__input--message input">
         <input class="input__native" name="message" type="text" placeholder="Your message"> 
-        <span class="input__lable">Message</span>     
-        <div class="input__status">Статус</div>                                              
+        <span class="input__lable">Message</span>
       </label>
       <input class="small-form__button button" type="submit" value="Send">
     </div>
@@ -249,7 +248,6 @@
       <use xlink:href="assets/img/svg-sprite/sprite.svg#facebook"></use>
     </svg>
   </a>
-  </a>
   <a href="#" class="socials__item">
     <svg class="socials__icon icon-svg">
       <use xlink:href="assets/img/svg-sprite/sprite.svg#twitter"></use>
@@ -278,12 +276,14 @@
       </div>
     </div>
     <div class="footer__body">
-      <address class="footer__main-info">
+      <div class="footer__main-info">
         <h6 class="footer__subtitle">HEAD OFFICE</h6>
-        <p><span>Address:</span>8502 Preston Rd. Inglewood, New York</p>
-        <p><span>Call:</span><a href="tel:4055550128">(405) 555-0128</a></p>
-        <p><span>Email:</span><a href="mailto:hello@createx.com">hello@createx.com</a></p>
-      </address>
+        <address>
+          <p><span>Address:</span>8502 Preston Rd. Inglewood, New York</p>
+          <p><span>Call:</span><a href="tel:4055550128">(405) 555-0128</a></p>
+          <p><span>Email:</span><a href="mailto:hello@createx.com">hello@createx.com</a></p>
+        </address>        
+      </div>
       <div class="footer__menu">
         <h6 class="footer__subtitle">WHO WE ARE</h6>
         <ul  class="footer__menu-list">
@@ -313,24 +313,117 @@
 <script src="assets/js/scripts.min.js"></script>
 
     </div>
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal" id="modal-1" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-modal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
       <header class="modal__header">
-        <h2 class="modal__title" id="modal-1-title">
-          Micromodal
-        </h2>
-        <button class="modal__close" aria-label="Close modal" data-modal-close></button>
+        <h4 class="modal__title" id="modal-1-title">Submit Request</h4>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
       </header>
-      <main class="modal__content" id="modal-1-content">
-        <p>
-          Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-        </p>
-      </main>
-      <footer class="modal__footer">
-        <button class="button modal__btn-primary">Continue</button>
-        <button class="button modal__btn" data-modal-close aria-label="Close this dialog window">Close</button>
-      </footer>
+      <div class="modal__content" id="modal-1-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="phone" type="tel" placeholder="Your phone" required> 
+            <span class="input__lable">Phone*</span>
+          </label>
+          <label class="modal__input modal__input--message input">
+            <textarea class="input__native" name="message" type="text" placeholder="Your message"></textarea>
+            <span class="input__lable">Message*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-subscribe" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-title">
+      <header class="modal__header">
+        <h4 class="modal__title" id="modal-subscribe-title">Subscribe to our newsletter</h4>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__content" id="modal-subscribe-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="email" type="email" placeholder="Your working email" required> 
+            <span class="input__lable">Email*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-SV" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-SV-title">
+      <header class="modal__header">
+        <h3 class="modal__title" id="modal-SV-title">Send your CV</h3>
+        <button class="modal__close" aria-label="Close modal" data-modal-close>
+          <svg class="icon-svg">
+            <use xlink:href="assets/img/svg-sprite/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__content" id="modal-SV-content">
+        <form class="modal__form validate-form">
+          <label class="modal__input input">
+            <input class="input__native" name="name" type="text" placeholder="Your name" required> 
+            <span class="input__lable">Name*</span>
+          </label>
+          <label class="modal__input input">
+            <select class="input__native select" name="location" required>
+              <option value="" disabled selected hidden>Choose your location</option>
+              <option value="Location 1">Location 1</option>
+              <option value="Location 2">Location 2</option>
+              <option value="Location 3">Location 3</option>
+              <option value="Location 4">Location 4</option>
+              <option value="Location 5">Location 5</option>
+              <option value="Location 6">Location 6</option>
+            </select>
+            <span class="input__lable">Location*</span>
+          </label>          
+          <label class="modal__input input">
+            <input class="input__native" name="phone" type="tel" placeholder="Your phone number" required> 
+            <span class="input__lable">Phone*</span>
+          </label>
+          <label class="modal__input input">
+            <input class="input__native" name="email" type="email" placeholder="Your working email" required> 
+            <span class="input__lable">Email*</span>
+          </label>
+          <label class="modal__input modal__input--message input">
+            <textarea class="input__native" name="message" type="text" placeholder="Your covering letter"></textarea>
+            <span class="input__lable">Сovering letter</span>
+          </label>
+          <label class="modal__input input add-file">
+            <svg class="icon-svg add-file__icon">
+              <use xlink:href="assets/img/svg-sprite/sprite.svg#attach"></use>
+            </svg>
+            <input class="add-file__input" name="file" type="file" required> 
+            <span class="add-file__text">Attach your CV*</span>
+          </label>
+          <button class="modal__button button" type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

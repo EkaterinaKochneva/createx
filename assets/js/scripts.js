@@ -123,6 +123,9 @@ window.addEventListener('DOMContentLoaded', function () {
           maximum: 18,
           message: "format +7 (000) 000-00-00"
         }
+      },
+      file: {
+        presence: true
       }
     };
     if (elements.length !== 0) {
@@ -241,4 +244,34 @@ window.addEventListener('DOMContentLoaded', function () {
     closeTrigger: 'data-modal-close',
     awaitCloseAnimation: true
   });
+  function select(elements) {
+    if (elements.length !== 0) {
+      elements.forEach(function (element) {
+        element.addEventListener('change', function () {
+          element.classList.add('is-change');
+        });
+      });
+    }
+  }
+  var selectList = document.querySelectorAll('.select');
+  select(selectList);
+  function addFileInput(elements) {
+    if (elements.length !== 0) {
+      elements.forEach(function (element) {
+        var input = element.querySelector('.add-file__input');
+        var label = element.querySelector('.add-file__text');
+        var labelVal = label.innerText;
+        input.addEventListener('change', function (el) {
+          var fileName = '';
+          element.classList.add('is-change');
+          if (input.value) {
+            fileName = input.value.split('\\').pop();
+          }
+          fileName ? label.innerText = fileName : label.innerText = labelVal;
+        });
+      });
+    }
+  }
+  var addFileList = document.querySelectorAll('.add-file');
+  addFileInput(addFileList);
 });
