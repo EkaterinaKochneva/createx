@@ -8,8 +8,12 @@
   justify-content: center;
   gap: 30px;
 
-  @media only screen and (max-width: $bp-md){
+  @media only screen and (max-width: $bp-lg){
     gap: 20px;
+  }
+
+  @media only screen and (max-width: $bp-sm){
+    gap: 10px;
   }
 
   &__item {
@@ -32,12 +36,9 @@
     @media only screen and (max-width: $bp-lg){
       width: calc((100% - 30px) / 2);
     }
-    @media only screen and (max-width: $bp-md){
-      width: calc((100% - 20px) / 2);
-    }
-
-    @media only screen and (max-width: $bp-xs){
-        width: 100%;
+    
+    @media only screen and (max-width: $bp-sm){
+        padding: 5px;
         max-width: 250px;
     }
   }
@@ -76,6 +77,10 @@
 
   &__title {
     transition: color .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-sm){
+       font-size: 16px; 
+    }
   }
 
   &__img {
