@@ -106,4 +106,8 @@ h6, .h6 {
   &-center {
     text-align: center;
   }
+  
+  &-width-limit {
+    max-width: 705px;
+  }
 }
