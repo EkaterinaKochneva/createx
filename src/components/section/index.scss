@@ -70,7 +70,7 @@
   }
 
   &__bottom {
-    margin-top: 85px;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -83,7 +83,8 @@
     }
 
     @media only screen and (max-width: $bp-sm){
-       margin-top: 30px; 
+       margin-top: 40px; 
+       row-gap: 10px;
     }
   }
 
@@ -95,7 +96,7 @@
     }
   }
 
-  & .benefits, & .our-services {
+  & .benefits, & .our-services, & .section-slider {
     margin-top: 60px;
 
     @media only screen and (max-width: $bp-md){
