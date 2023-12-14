@@ -134,8 +134,16 @@
     <div class="container hero__container-pagination"> 
       <div class="slider__pagination hero__pagination swiper-pagination"></div>
     </div>
-    <div class="slider__button-prev hero__button-prev swiper-button-prev"></div>
-    <div class="slider__button-next hero__button-next swiper-button-next"></div>
+    <div class="slider__button-prev hero__button-prev swiper-button-prev">
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#left"></use>
+      </svg>
+    </div>
+    <div class="slider__button-next hero__button-next swiper-button-next">
+      <svg class="icon-svg">
+        <use xlink:href="assets/img/svg-sprite/sprite.svg#right"></use>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -226,61 +234,176 @@
           <div class="container">
             <h2 class="text-center">Our services</h2>
             <p class="text-center text-large">Createx Construction Bureau is a construction giant with a full range of construction services.</p>
-            <div class="our-services">
-  <div class="our-services__item">
-    <div class="our-services__item-content">
-      <svg class="our-services__icon icon-svg">
-        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-construction"></use>
-      </svg>
-      <h5 class="our-services__title">Construction</h5>
-    </div>
-    <picture class="our-services__img">
-      <source type="image/webp" srcset="assets/img/services/construction.webp">
-      <img src="assets/img/services/construction.jpg" alt="Construction">
-    </picture>
-  </div>
-  <div class="our-services__item">
-    <div class="our-services__item-content">
-      <svg class="our-services__icon icon-svg">
-        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-plan"></use>
-      </svg>
-      <h5 class="our-services__title">Project Development</h5>
-    </div>
-    <picture class="our-services__img">
-      <source type="image/webp" srcset="assets/img/services/project.webp">
-      <img src="assets/img/services/project.jpg" alt="Project Development">
-    </picture>
-  </div>
-  <div class="our-services__item">
-    <div class="our-services__item-content">
-      <svg class="our-services__icon icon-svg">
-        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-pantone"></use>
-      </svg>
-      <h5 class="our-services__title">Interior Design</h5>
-    </div>
-    <picture class="our-services__img">
-      <source type="image/webp" srcset="assets/img/services/design.webp">
-      <img src="assets/img/services/design.jpg" alt="Interior Design">
-    </picture>
-  </div>
-  <div class="our-services__item">
-    <div class="our-services__item-content">
-      <svg class="our-services__icon icon-svg">
-        <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-painting"></use>
-      </svg>
-      <h5 class="our-services__title">Repairs</h5>
-    </div>
-    <picture class="our-services__img">
-      <source type="image/webp" srcset="assets/img/services/repairs.webp">
-      <img src="assets/img/services/repairs.jpg" alt="Repairs">
-    </picture>
-  </div>
-</div>
+            <ul class="our-services">
+  <li class="our-services__item">
+    <a class="our-services__link" href="#" >
+      <div class="our-services__item-content">
+        <svg class="our-services__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-construction"></use>
+        </svg>
+        <h5 class="our-services__title">Construction</h5>
+      </div>
+      <picture class="our-services__img">
+        <source type="image/webp" srcset="assets/img/services/construction.webp">
+        <img src="assets/img/services/construction.jpg" alt="Construction">
+      </picture>
+    </a>
+  </li>
+  <li class="our-services__item">
+    <a class="our-services__link" href="#" >
+      <div class="our-services__item-content">
+        <svg class="our-services__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-plan"></use>
+        </svg>
+        <h5 class="our-services__title">Project Development</h5>
+      </div>
+      <picture class="our-services__img">
+        <source type="image/webp" srcset="assets/img/services/project.webp">
+        <img src="assets/img/services/project.jpg" alt="Project Development">
+      </picture>
+    </a>    
+  </li>
+  <li class="our-services__item">
+    <a class="our-services__link" href="#" >
+      <div class="our-services__item-content">
+        <svg class="our-services__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-pantone"></use>
+        </svg>
+        <h5 class="our-services__title">Interior Design</h5>
+      </div>
+      <picture class="our-services__img">
+        <source type="image/webp" srcset="assets/img/services/design.webp">
+        <img src="assets/img/services/design.jpg" alt="Interior Design">
+      </picture>
+    </a>    
+  </li>
+  <li class="our-services__item">
+    <a class="our-services__link" href="#" >
+      <div class="our-services__item-content">
+        <svg class="our-services__icon icon-svg">
+          <use xlink:href="assets/img/svg-sprite/sprite.svg#ic-painting"></use>
+        </svg>
+        <h5 class="our-services__title">Repairs</h5>
+      </div>
+      <picture class="our-services__img">
+        <source type="image/webp" srcset="assets/img/services/repairs.webp">
+        <img src="assets/img/services/repairs.jpg" alt="Repairs">
+      </picture>
+    </a>    
+  </li>
+</ul>
             <div class="section__bottom">
               <h4>Learn more about our services</h4>
               <a class="section__button button button--lg" href="#">View services</a>
             </div>
           </div>           
+        </section>
+
+        <section class="section"> 
+          <div class="container">
+            <h2 class="text-width-limit">Browse our selected projects and learn more about our work</h2>
+            <div class="section__slider section-slider slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">Red Finger Building</h5>
+    <p class="project-card__desc text-small">Business Centers</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/red-finger.webp">
+    <img src="assets/img/projects/red-finger.jpg" alt="Red Finger Building">
+  </picture>
+</div>
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">Cubes Building</h5>
+    <p class="project-card__desc text-small">Business Centers</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/cubes.webp">
+    <img src="assets/img/projects/cubes.jpg" alt="Cubes Building">
+  </picture>
+</div>
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">The Pencil Building</h5>
+    <p class="project-card__desc text-small">Stores & Malls</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/pencil.webp">
+    <img src="assets/img/projects/pencil.jpg" alt="The Pencil Building">
+  </picture>
+</div>
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">Red Finger Building</h5>
+    <p class="project-card__desc text-small">Business Centers</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/red-finger.webp">
+    <img src="assets/img/projects/red-finger.jpg" alt="Red Finger Building">
+  </picture>
+</div>
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">Cubes Building</h5>
+    <p class="project-card__desc text-small">Business Centers</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/cubes.webp">
+    <img src="assets/img/projects/cubes.jpg" alt="Cubes Building">
+  </picture>
+</div>
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    <div class="project-card">
+  <div class="project-card__content">
+    <h5 class="project-card__title">The Pencil Building</h5>
+    <p class="project-card__desc text-small">Stores & Malls</p>
+    <a class="project-card__button button button--border" href="#">View Project</a>
+  </div>
+  <picture class="project-card__img">
+    <source type="image/webp" srcset="assets/img/projects/pencil.webp">
+    <img src="assets/img/projects/pencil.jpg" alt="The Pencil Building">
+  </picture>
+</div>
+                  </div>
+                </div>
+              </div>              
+              <div class="section-slider__buttons">
+                <div class="section-slider__button-prev slider__button-prev swiper-button-prev">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#left"></use>
+                  </svg>
+                </div>
+                <div class="section-slider__button-next slider__button-next swiper-button-next">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#right"></use>
+                  </svg>
+                </div>
+              </div>    
+              <div class="section-slider__pagination swiper-pagination slider__pagination"></div>          
+            </div>
+            <div class="section__bottom">
+              <h4>Explore all our works</h4>
+              <a class="section__button button button--lg" href="#">View portfolio</a>
+            </div>
+          </div>         
         </section>
         
       </main> 
