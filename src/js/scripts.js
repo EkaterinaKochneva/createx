@@ -30,4 +30,7 @@ select(selectList);
 const addFileList = document.querySelectorAll('.add-file');
 addFileInput(addFileList);
 
+//=include ../components/section-slider/index.js
+const slidersList = document.querySelectorAll('.section-slider');
+sectionSlider(slidersList);
 });

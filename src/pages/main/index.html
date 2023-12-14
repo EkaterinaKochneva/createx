@@ -54,6 +54,77 @@
             </div>
           </div>           
         </section>
+
+        <section class="section"> 
+          <div class="container">
+            <h2 class="text-width-limit">Browse our selected projects and learn more about our work</h2>
+            <div class="section__slider section-slider slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'Red Finger Building',
+                      'desc': 'Business Centers',
+                      'img': 'assets/img/projects/red-finger'
+                    })
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'Cubes Building',
+                      'desc': 'Business Centers',
+                      'img': 'assets/img/projects/cubes'
+                    })
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'The Pencil Building',
+                      'desc': 'Stores & Malls',
+                      'img': 'assets/img/projects/pencil'
+                    })
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'Red Finger Building',
+                      'desc': 'Business Centers',
+                      'img': 'assets/img/projects/red-finger'
+                    })
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'Cubes Building',
+                      'desc': 'Business Centers',
+                      'img': 'assets/img/projects/cubes'
+                    })
+                  </div>
+                  <div class="section-slider__slide swiper-slide">
+                    @@include('../../components/project-card/index.html', {
+                      'title': 'The Pencil Building',
+                      'desc': 'Stores & Malls',
+                      'img': 'assets/img/projects/pencil'
+                    })
+                  </div>
+                </div>
+              </div>              
+              <div class="section-slider__buttons">
+                <div class="section-slider__button-prev slider__button-prev swiper-button-prev">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#left"></use>
+                  </svg>
+                </div>
+                <div class="section-slider__button-next slider__button-next swiper-button-next">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#right"></use>
+                  </svg>
+                </div>
+              </div>    
+              <div class="section-slider__pagination swiper-pagination slider__pagination"></div>          
+            </div>
+            <div class="section__bottom">
+              <h4>Explore all our works</h4>
+              <a class="section__button button button--lg" href="#">View portfolio</a>
+            </div>
+          </div>         
+        </section>
         
       </main> 
 
