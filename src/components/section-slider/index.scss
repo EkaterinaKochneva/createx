@@ -1,0 +1,64 @@
+@import 'src/styles/global/vars';
+
+.section-slider {
+  position: relative;
+
+  & .swiper {
+    padding: 0 20px 80px;
+    margin: 0 -20px -80px;
+
+    @media only screen and (max-width: $bp-md){
+      padding: 0 0 80px;
+      margin: 0 0 -80px;
+    }
+  }
+
+  &__slide > div {
+    margin: 0 auto;
+  }
+
+  &__buttons {
+    position: absolute;
+    top: -72px;
+    right: 35px;
+
+    @media only screen and (max-width: $bp-xxl){
+       top: -32px; 
+    }
+
+    @media only screen and (max-width: $bp-md){
+       display: none; 
+    }
+
+  }
+
+  &__button-prev {
+    left: unset;
+    right: 0;
+  }
+
+  &__button-next {
+    left: 0;
+    right: unset;
+  }
+
+  &__button-prev:hover,
+  &__button-next:hover {
+    background-color: $main-accent-color;
+    color: $white;
+  }
+
+  &__pagination {
+
+    display: none;
+
+    @media only screen and (max-width: $bp-md){
+       display: block; 
+    }
+    &.swiper-pagination-bullets {
+      bottom: 50px;
+    }
+
+  }
+}
+
