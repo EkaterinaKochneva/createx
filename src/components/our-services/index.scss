@@ -26,9 +26,8 @@
     aspect-ratio: 1/1;
 
     @extend %box-small-shadow;
-    border: 1px solid $grey-300;
+    background-color: $white;
     padding: 15px;
-    overflow: hidden;
 
     @media only screen and (max-width: $bp-lg){
       width: calc((100% - 30px) / 2);
