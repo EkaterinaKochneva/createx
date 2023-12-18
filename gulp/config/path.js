@@ -60,8 +60,8 @@ module.exports = {
   },
 
   favicon: {
-    src: `${srcFolder}/assets/favicon/favicon.svg`,
-    build: `${buildFolder}/assets/favicon/`,
-    watch: `${srcFolder}/assets/favicon/favicon.svg`
+    src: `${srcFolder}/assets/favicon/favicon.ico`,
+    build: `${buildFolder}/`,
+    watch: `${srcFolder}/assets/favicon/favicon.ico`
   }
 }
