@@ -1,6 +1,9 @@
 // Подключение скриптов блоков и страниц
 window.addEventListener('DOMContentLoaded', function() {
 
+// utils
+//=include utils/debounce.js
+
 //=include ../components/header/index.js
 mobileMenu();
 
@@ -33,4 +36,9 @@ addFileInput(addFileList);
 //=include ../components/section-slider/index.js
 const slidersList = document.querySelectorAll('.section-slider');
 sectionSlider(slidersList);
+
+//=include ../ui/slider-mobile/index.js
+//=include ../components/simple-slider/index.js
+const slidersMobileList = document.querySelectorAll('.jsSliderMobile');
+simpleSlider(slidersMobileList);
 });
