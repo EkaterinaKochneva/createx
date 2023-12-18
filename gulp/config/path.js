@@ -18,7 +18,7 @@ module.exports = {
   },
 
   scripts: {
-    src: `${srcFolder}/js/*.js`,
+    src: `${srcFolder}/js/scripts.js`,
     build: `${buildFolder}/assets/js/`,
     watch: [`${srcFolder}/**/*.js`, `!${srcFolder}/assets/lib/**/*.js`]
   },
