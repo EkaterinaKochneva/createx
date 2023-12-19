@@ -8,6 +8,9 @@ window.addEventListener('DOMContentLoaded', function() {
 mobileMenu();
 
 //=include ../components/hero/index.js
+const heroSlider = document.querySelector('.hero__slider');
+heroSliderInit(heroSlider);
+
 //=include ../ui/go-to-top/index.js
 goToTop();
 
