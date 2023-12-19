@@ -3,6 +3,10 @@ function goToTop() {
   const button = document.querySelector('.go-to-top');  
   const scrollVal = 100;
 
+  if (!button) {
+    return false;
+  }
+
   const activateScrollBtn = () => {
     let scrollOffset = window.scrollY;  
 
