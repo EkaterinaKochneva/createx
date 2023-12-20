@@ -2,11 +2,27 @@
 
 // Подключение скриптов блоков и страниц
 window.addEventListener('DOMContentLoaded', function () {
+  // utils
+  function debounce(callee, timeoutMs) {
+    var timer;
+    return function () {
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        callee.apply(void 0, args);
+      }, timeoutMs);
+    };
+  }
   var mobileMenu = function mobileMenu() {
     var body = document.querySelector('body');
     var mainMenu = document.querySelector('.top-menu');
     var burger = document.querySelector('.burger');
     var close = document.querySelector('.top-menu__close');
+    if (!mainMenu || !burger || !close) {
+      return false;
+    }
     burger.addEventListener('click', function () {
       mainMenu.classList.add('is-active');
       body.classList.add('faded');
@@ -17,39 +33,51 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   };
   mobileMenu();
-  var heroSlider = new Swiper('.hero__slider', {
-    loop: true,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.hero__button-next',
-      prevEl: '.hero__button-prev'
-    },
-    pagination: {
-      el: '.hero__pagination',
-      clickable: true,
-      type: 'bullets',
-      renderBullet: function renderBullet(index, className) {
-        var number;
-        if (index < 11) {
-          number = "0".concat(index + 1);
-        } else {
-          number = index + 1;
-        }
-        return '<span class="' + className + '">' + '<span class="swiper-pagination-numbered">' + number + '</span>' + '</span>';
-      }
+  var heroSliderInit = function heroSliderInit(element) {
+    if (!element) {
+      return false;
     }
-  });
+    var heroSwiper = new Swiper(element, {
+      loop: true,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.hero__button-next',
+        prevEl: '.hero__button-prev'
+      },
+      pagination: {
+        el: '.hero__pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function renderBullet(index, className) {
+          var number;
+          if (index < 11) {
+            number = "0".concat(index + 1);
+          } else {
+            number = index + 1;
+          }
+          return '<span class="' + className + '">' + '<span class="swiper-pagination-numbered">' + number + '</span>' + '</span>';
+        }
+      }
+    });
+  };
+  var heroSlider = document.querySelector('.hero__slider');
+  heroSliderInit(heroSlider);
   function goToTop() {
     var button = document.querySelector('.go-to-top');
     var scrollVal = 100;
-    window.addEventListener('scroll', function () {
+    if (!button) {
+      return false;
+    }
+    var activateScrollBtn = function activateScrollBtn() {
       var scrollOffset = window.scrollY;
       if (scrollOffset > scrollVal && !button.classList.contains('is-active')) {
         button.classList.add('is-active');
       } else if (scrollOffset <= scrollVal && button.classList.contains('is-active')) {
         button.classList.remove('is-active');
       }
-    });
+    };
+    var onScroll = debounce(activateScrollBtn, 300);
+    window.addEventListener('scroll', onScroll);
     button.addEventListener('click', function () {
       window.scrollTo({
         top: 0,
@@ -307,4 +335,70 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   var slidersList = document.querySelectorAll('.section-slider');
   sectionSlider(slidersList);
+  var sliderMobile = function sliderMobile(element, breakpoints, options) {
+    var sliderInstance = null;
+    var initSlider = function initSlider() {
+      sliderInstance = new Swiper(element, options);
+    };
+    var destroySlider = function destroySlider() {
+      var _sliderInstance;
+      (_sliderInstance = sliderInstance) === null || _sliderInstance === void 0 || _sliderInstance.destroy();
+      sliderInstance = null;
+    };
+    var makeSliderComponent = function makeSliderComponent() {
+      var conditionInit = function conditionInit() {
+        var isMobile = window.innerWidth <= breakpoints;
+        return isMobile && !sliderInstance;
+      };
+      var conditionDestroy = function conditionDestroy() {
+        var isDesktop = window.innerWidth > breakpoints;
+        return isDesktop && sliderInstance;
+      };
+      if (conditionInit()) {
+        initSlider();
+      }
+      if (conditionDestroy()) {
+        destroySlider();
+      }
+    };
+    var onResize = debounce(makeSliderComponent, 300);
+    makeSliderComponent();
+    window.addEventListener('resize', onResize);
+  };
+  function simpleSlider(elements) {
+    if (elements.length !== 0) {
+      elements.forEach(function (el) {
+        var element = el;
+        var breakpoints = 767;
+        var options = {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 20,
+          setWrapperSize: true,
+          pagination: {
+            el: el.querySelector('.simple-slider__pagination')
+          }
+        };
+        sliderMobile(element, breakpoints, options);
+      });
+    }
+  }
+  var slidersMobileList = document.querySelectorAll('.jsSliderMobile');
+  simpleSlider(slidersMobileList);
+  function reviewsSlider(elements) {
+    if (elements.length !== 0) {
+      elements.forEach(function (element) {
+        var slider = new Swiper(element, {
+          loop: true,
+          slidesPerView: 1,
+          navigation: {
+            nextEl: element.querySelector('.swiper-button-next'),
+            prevEl: element.querySelector('.swiper-button-prev')
+          }
+        });
+      });
+    }
+  }
+  var slidersReviewList = document.querySelectorAll('.reviews-slider');
+  reviewsSlider(slidersReviewList);
 });
