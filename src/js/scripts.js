@@ -44,4 +44,8 @@ sectionSlider(slidersList);
 //=include ../components/simple-slider/index.js
 const slidersMobileList = document.querySelectorAll('.jsSliderMobile');
 simpleSlider(slidersMobileList);
+
+//=include ../components/reviews-slider/index.js
+const slidersReviewList = document.querySelectorAll('.reviews-slider');
+reviewsSlider(slidersReviewList);
 });
