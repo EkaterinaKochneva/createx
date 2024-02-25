@@ -17,19 +17,16 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   var mobileMenu = function mobileMenu() {
     var body = document.querySelector('body');
+    var header = document.querySelector('header');
     var mainMenu = document.querySelector('.top-menu');
     var burger = document.querySelector('.burger');
-    var close = document.querySelector('.top-menu__close');
     if (!mainMenu || !burger || !close) {
       return false;
     }
     burger.addEventListener('click', function () {
-      mainMenu.classList.add('is-active');
-      body.classList.add('faded');
-    });
-    close.addEventListener('click', function () {
-      mainMenu.classList.remove('is-active');
-      body.classList.remove('faded');
+      body.classList.toggle('is-hidden');
+      mainMenu.classList.toggle('is-active');
+      header.classList.toggle('is-open');
     });
   };
   mobileMenu();
@@ -401,4 +398,57 @@ window.addEventListener('DOMContentLoaded', function () {
   }
   var slidersReviewList = document.querySelectorAll('.reviews-slider');
   reviewsSlider(slidersReviewList);
+  var digitsProgress = function digitsProgress(elements) {
+    if (elements.length !== 0) {
+      var timing = 10;
+      var strokeWidth = 6;
+      var width = 148;
+      elements.forEach(function (element) {
+        var counter = 0;
+        var progressCircle = +element.dataset.progress;
+        var progressVal = +element.dataset.value;
+        var progressRatio = (progressVal / progressCircle).toFixed(2);
+        var elementVal = element.querySelector(".digits__value span");
+        var circle = element.querySelector(".digits__progress circle");
+        var radius = width / 2 - strokeWidth / 2;
+        var circleLength = 2 * Math.PI * radius;
+        circle.setAttribute("cx", width / 2);
+        circle.setAttribute("cy", width / 2);
+        circle.setAttribute("r", radius);
+        circle.style.strokeDasharray = Math.round(circleLength);
+        var progress = function progress() {
+          if (counter == progressCircle) {
+            clearInterval();
+            return;
+          }
+          counter++;
+          var valueCounter = Math.round(counter * progressRatio);
+          circle.style.strokeDashoffset = Math.round(circleLength - counter / 100 * circleLength);
+          elementVal.innerText = "".concat(valueCounter);
+        };
+        setInterval(progress, timing);
+      });
+    }
+  };
+  var digitsList = document.querySelectorAll('.digits__item');
+  function checkScroll(element, cb, offsetY) {
+    function getTopCoords(elem) {
+      var box = elem.getBoundingClientRect();
+      return box.top + window.pageYOffset;
+    }
+    var blockPosTop = getTopCoords(element);
+    var ident = offsetY ? offsetY : 0;
+    var activated = false;
+    var activateScrollElement = function activateScrollElement() {
+      var posTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      if (posTop + ident > blockPosTop && !activated) {
+        activated = true;
+        cb();
+      }
+    };
+    var onScroll = debounce(activateScrollElement, 200);
+    window.addEventListener('scroll', onScroll);
+  }
+  var digits = document.querySelector('.digits');
+  checkScroll(digits, digitsProgress.bind(null, digitsList), 300);
 });

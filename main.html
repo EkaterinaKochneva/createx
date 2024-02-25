@@ -18,9 +18,6 @@
       <img src="assets/img/icons/logo-header.svg" alt="Логотип">        
     </a> 
     <nav class="header__nav top-menu">
-      <button class="top-menu__close" type="button">
-        Закрыть
-      </button>
       <ul class="top-menu__list">
         <li class="top-menu__item"><a href="#" class="top-menu__link">About Us</a></li>
         <li class="top-menu__item"><a href="#" class="top-menu__link">Services</a></li>
@@ -146,7 +143,7 @@
         <section class="section">
           <div class="container">
             <h2 class="text-center">We are Createx Construction Bureau </h2>
-            <p class="text-center text-large">We are rightfully considered to be the best construction company in the USA.</p>
+            <p class="text-center text-large text-grey">We are rightfully considered to be the best construction company in the USA.</p>
             <div class="section__video">
               <div class="video-cover" data-video="https://youtu.be/dQw4w9WgXcQ">
   <button class="video-cover__button" aria-label="Play video">
@@ -164,7 +161,7 @@
         <section class="section section--sm-pd section--hidden">          
           <div class="container">
             <h2 class="text-center">Our core values</h2>
-            <p class="text-center text-large">Our mission is to set the highest standards for construction sphere.</p>
+            <p class="text-center text-large text-grey">Our mission is to set the highest standards for construction sphere.</p>
             <div class="benefits">
   <div class="benefits__item">
     <div class="benefits__icon">
@@ -229,7 +226,7 @@
           </picture>  
           <div class="container">
             <h2 class="text-center">Our services</h2>
-            <p class="text-center text-large">Createx Construction Bureau is a construction giant with a full range of construction services.</p>
+            <p class="text-center text-large text-grey">Createx Construction Bureau is a construction giant with a full range of construction services.</p>
             <ul class="our-services">
   <li class="our-services__item">
     <a class="our-services__link" href="#" >
@@ -510,9 +507,47 @@
     </div>
   </div>
 </section>
-        <section>
+        <section class="section section--big-pd section--decor">
           <div class="container">
-            <h2>Lorem ipsum dolor sit amet consectetur, </h2>
+            <h2  class="text-center">Some facts and figures</h2>
+            <div class="digits">
+  <div class="digits__item digits__item--info-1" data-progress="89" data-value="98">    
+    <div class="digits__circle">
+      <svg class="digits__progress">
+        <circle></circle>
+      </svg>
+      <div class="digits__value"><span>0</span>%</div>
+    </div>
+    <p class="digits__text text-small">Totally satisfied clients</p>
+  </div>
+  <div class="digits__item digits__item--info-2" data-progress="75" data-value="20">    
+    <div class="digits__circle">
+      <svg class="digits__progress">
+        <circle></circle>
+      </svg>
+      <div class="digits__value"><span>0</span></div>
+    </div>
+    <p class="digits__text text-small">Years of experience</p>
+  </div>
+  <div class="digits__item digits__item--info-3" data-progress="82" data-value="9452">    
+    <div class="digits__circle">
+      <svg class="digits__progress">
+        <circle></circle>
+      </svg>
+      <div class="digits__value"><span>0</span></div>
+    </div>
+    <p class="digits__text text-small">Working hours spent</p>
+  </div>
+  <div class="digits__item digits__item--info-4" data-progress="100" data-value="100">    
+    <div class="digits__circle">
+      <svg class="digits__progress">
+        <circle></circle>
+      </svg>
+      <div class="digits__value"><span>0</span>%</div>
+    </div>
+    <p class="digits__text text-small">Succeeded projects</p>
+  </div>
+</div>
           </div>
           
         </section>
@@ -633,7 +668,7 @@
             <span class="input__lable">Phone*</span>
           </label>
           <label class="modal__input modal__input--message input">
-            <textarea class="input__native" name="message" type="text" placeholder="Your message"></textarea>
+            <textarea class="input__native" name="message" placeholder="Your message"></textarea>
             <span class="input__lable">Message*</span>
           </label>
           <button class="modal__button button" type="submit">Send</button>
@@ -709,7 +744,7 @@
             <span class="input__lable">Email*</span>
           </label>
           <label class="modal__input modal__input--message input">
-            <textarea class="input__native" name="message" type="text" placeholder="Your covering letter"></textarea>
+            <textarea class="input__native" name="message" placeholder="Your covering letter"></textarea>
             <span class="input__lable">Сovering letter</span>
           </label>
           <label class="modal__input input add-file">
