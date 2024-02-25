@@ -22,6 +22,7 @@
 
 		&__text {
       margin-top: 24px;
+      color: $grey-800;
 		}
 
     &__bottom {
@@ -30,10 +31,12 @@
     }
 
 		&__author {
+
 		}
 
 		&__author-position {
       margin-top: 4px;
+      color: $grey-700;
 		}
 
     &__buttons {

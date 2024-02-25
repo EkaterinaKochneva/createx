@@ -6,6 +6,24 @@
   z-index: 5;
   width: 100%;
 
+  &::before {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    background-color: #2a2a2a;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
+
+  &.faded::before {
+    z-index: 0;
+    opacity: 0.8;
+  }
+
   &--main {
     background-color: $white;
   }

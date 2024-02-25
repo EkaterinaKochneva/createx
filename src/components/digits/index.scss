@@ -1,0 +1,73 @@
+@import 'src/styles/global/vars';
+:root {
+  --dig-color: black;
+}
+
+.digits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+
+  &__item {
+    text-align: center;
+    width: 148px;
+  }
+
+  &__circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+
+    &::after {
+      @extend %after-helper;
+      z-index: -1;
+      border: 6px solid var(--dig-color);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    circle {
+      stroke: var(--dig-color);
+      stroke-width: 6px;
+      // stroke-linecap: round;
+      fill: none;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+  }
+
+  &__value {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__text {
+    margin-top: 20px;
+    color: $grey-900;
+  }
+
+  &__item--info-1 {
+    --dig-color: #F89828;
+  }
+  &__item--info-2 {
+    --dig-color: #F52F6E;
+  }
+  &__item--info-3 {
+    --dig-color: #5A87FC;
+  }
+  &__item--info-4 {
+    --dig-color: #03CEA4;
+  }
+}

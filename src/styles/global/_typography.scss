@@ -114,4 +114,8 @@ h6, .h6 {
   &-width-limit {
     max-width: 705px;
   }
+
+  &-grey {
+    color: $grey-700;
+  }
 }

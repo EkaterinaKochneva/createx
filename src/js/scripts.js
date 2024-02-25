@@ -48,4 +48,8 @@ simpleSlider(slidersMobileList);
 //=include ../components/reviews-slider/index.js
 const slidersReviewList = document.querySelectorAll('.reviews-slider');
 reviewsSlider(slidersReviewList);
+
+//=include ../components/digits/index.js
+const digitsList = document.querySelectorAll('.digits__item');
+digitsProgress(digitsList);
 });

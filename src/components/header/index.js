@@ -1,6 +1,6 @@
 const mobileMenu = () => {
 
-  const body = document.querySelector('body');
+  const header = document.querySelector('header');
   const mainMenu = document.querySelector('.top-menu');
   const burger = document.querySelector('.burger');
   const close = document.querySelector('.top-menu__close');
@@ -11,12 +11,12 @@ const mobileMenu = () => {
 
   burger.addEventListener('click', () => {
     mainMenu.classList.add('is-active');
-    body.classList.add('faded');
+    header.classList.add('faded');
     
   });
   close.addEventListener('click', () => {
     mainMenu.classList.remove('is-active');
-    body.classList.remove('faded');
+    header.classList.remove('faded');
     
   });
   
