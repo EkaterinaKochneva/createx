@@ -51,5 +51,9 @@ reviewsSlider(slidersReviewList);
 
 //=include ../components/digits/index.js
 const digitsList = document.querySelectorAll('.digits__item');
-digitsProgress(digitsList);
+
+//=include utils/checkScroll.js
+const digits = document.querySelector('.digits');
+checkScroll(digits, digitsProgress.bind(null, digitsList), 300);
+
 });

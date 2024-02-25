@@ -1,6 +1,6 @@
 const digitsProgress = (elements) => {
   if (elements.length !== 0) {
-    let timing = 20;
+    let timing = 10;
     const strokeWidth = 6;
     const width = 148;
 
