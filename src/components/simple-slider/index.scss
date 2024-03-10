@@ -6,6 +6,7 @@
 
   @media only screen and (max-width: $bp-md){
      overflow: hidden; 
+     padding-bottom: 30px;
   }
 
   & .swiper-wrapper {
@@ -50,11 +51,12 @@
     }
   }
 
-  &__pagination {
+  &__pagination.swiper-pagination-bullets {
     display: none;
 
     @media only screen and (max-width: $bp-md){
-       display: block; 
+       display: block;
+       bottom: 0; 
     }
   }
 

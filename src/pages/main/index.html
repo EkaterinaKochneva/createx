@@ -133,13 +133,19 @@
           </div>
         </section>
         @@include('../../components/img-content/index.html')
-        <section class="section section--big-pd section--decor">
+        <section class="section section--big-pd section--decor" style="background-image: url(assets/img/background/bg-decor-white.jpg);">
           <div class="container">
             <h2  class="text-center">Some facts and figures</h2>
             @@include('../../components/digits/index.html')
-          </div>
-          
+            <h2  class="text-center">Recent news</h2>
+            @@include('../../components/main-news/index.html')
+            <div class="section__bottom">
+              <h4>Explore all our news posts</h4>
+              <a class="section__button button button--lg" href="#">View all news</a>
+            </div>
+          </div>          
         </section>
+        @@include('../../components/request-form/index.html')
       </main> 
 
       @@include('../../components/footer/index.html')

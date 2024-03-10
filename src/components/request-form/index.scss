@@ -1,0 +1,58 @@
+@import 'src/styles/global/vars';
+
+.request-form {
+    padding: 80px 0;
+    background-position: center;
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-md){
+              padding: 40px 0;
+    }
+
+    &__form {
+        padding: 48px 40px;
+        background-color: $white;
+        width: 100%;
+        max-width: 495px;
+        margin-left: auto;
+
+        @extend %box-small-shadow;
+
+        @media only screen and (max-width: $bp-lg){
+             margin: 0 auto; 
+        }
+
+        @media only screen and (max-width: $bp-md){
+              padding: 24px 20px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+
+        @media only screen and (max-width: $bp-sm){
+             margin-bottom: 18px; 
+        }
+    }
+
+    &__input {
+        margin-bottom: 20px;
+
+        & textarea {
+            height: 66px;
+        }
+    }
+
+    &__input--message {
+    }
+
+    &__agree {
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
